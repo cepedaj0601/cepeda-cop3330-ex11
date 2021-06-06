@@ -38,6 +38,14 @@ public class App {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        System.out.println();
+        System.out.println("How many euros are you exchanging?");
+        double euros = in.nextDouble();
+
+        System.out.println("What is the exchange rate?");
+        double rate = in.nextDouble();
+
+        double usd = euros * rate;
+
+        System.out.printf("\n%.2f euros at an exchange rate of %f is\n%.2f U.S. dollars.", euros, rate, usd);
     }
 }
